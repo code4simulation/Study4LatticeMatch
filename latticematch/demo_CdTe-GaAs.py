@@ -1,4 +1,5 @@
-# Reproduce results in Zur-McGill paper (1984)
+# Ref: Zur-McGill paper (1984)
+# Next: periodic coherent interface
 import numpy as np
 from ase.io import read, write
 from pymatgen.io.ase import AseAtomsAdaptor
@@ -14,8 +15,6 @@ warnings.filterwarnings('ignore')
 def main():
     CdTe = Structure.from_file('POSCAR_CdTe.vasp')
     GaAs = Structure.from_file('POSCAR_GaAs.vasp')
-    #TiN = Structure.from_file('POSCAR_TiN.vasp')
-    #tZr = Structure.from_file('POSCAR_tZrO2.vasp')
 
     builder = MyBuilder()
     adaptor = AseAtomsAdaptor()
